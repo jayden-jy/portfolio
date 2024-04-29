@@ -176,7 +176,7 @@ section .title h2 {
   text-align: center;
 }
 #Projects .tab_container .tab_list .tab:focus {
-  border: 1px solid #252E33;
+  border: 1px solid #252E33 !important;
 }
 #Projects .tab_container .tab_list .tab + .tab {
   border-left: 0;
@@ -272,6 +272,9 @@ section .title h2 {
 @media screen and (max-width: 1300px) {
   section {
     margin: 0 2rem;
+    min-height: auto;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
   }
   .arrow {
     right: 0;
@@ -306,16 +309,17 @@ section .title h2 {
   #header p {
     font-size: 8vw;
   }
-  section .title {
-    padding-top: 5rem;
-  }
   #experience .skill li {
-    width: calc(100% - 6rem);
+    width: calc(100% - 4rem);
+    margin: 2rem;
   }
   
 }
 @media screen and (max-width: 500px) {
   #profile .content .pic {
     height: 40rem;
+  }
+  #Projects .tab_container .tab_list .tab {
+    width: 33.33%;
   }
 }

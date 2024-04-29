@@ -192,9 +192,9 @@
               <i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i>
             </div>
             <span class="project_title">시소</span>
-            <p class="project_desc">시소</p>
+            <p class="project_desc">준비중</p>
             <span class="project_skill">
-              <i>HTML</i><i>SCSS</i><i>Javascript</i><i>jQuery</i><i>GULP</i>
+              <i>HTML</i><i>SCSS</i><i>Javascript</i><i>jQuery</i>
             </span>
           </a>
         </div>
@@ -210,24 +210,26 @@
   </footer>
 
 <script>
-
-// section 화면 노출 확인
-let observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = 1;
-      entry.target.style.transform = 'translateY(0px)';
-    } else {
-      entry.target.style.opacity = 0;
-      entry.target.style.transform = 'translateY(20px)';
-    }
+document.addEventListener("DOMContentLoaded", function() {
+  // section 화면 노출 확인
+  let observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateY(0px)';
+      } else {
+        entry.target.style.opacity = 0;
+        entry.target.style.transform = 'translateY(20px)';
+      }
+    });
+  }, {
+    threshold: 0.4
   });
-}, {
-  threshold: 0.5
+
+  let items = document.querySelectorAll('section');
+  items.forEach(item => observer.observe(item));
 });
 
-let items = document.querySelectorAll('section');
-items.forEach(item => observer.observe(item));
 
 // 버튼 색상 변경
 window.addEventListener('scroll', function() {
