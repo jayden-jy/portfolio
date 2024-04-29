@@ -1,0 +1,321 @@
+section {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1100px;
+  min-height: 90vh;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1.3s;
+}
+section .title {
+  margin-bottom: 5rem;
+  padding-top: 10rem;
+  text-align: center;
+}
+section .title p {
+  font-size: 1.6rem;
+  color: #555;
+}
+section .title h2 {
+  font-size: 4.8rem;
+  font-weight: 700;
+}
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 5rem;
+  font-size: 3rem;
+}
+#header {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('../images/bg.jpg') no-repeat center;
+  background-size: cover;
+}
+#header::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(25, 26, 30, 0.9) no-repeat;
+  background-size: contain;
+}
+#header p {
+  position: relative;
+  font-size: 7rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+#header p span {
+  display: block;
+  font-size: 1.8rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+#header h1 {
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #fff;
+}
+#header .link_btn {
+  position: fixed;
+  bottom: 40px;
+  right: 0;
+  z-index: 10;
+  padding-right: 3.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  transition: all 0.35s;
+}
+#header .link_btn::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 1px;
+  background-color: #fff;
+  transition: all 0.35s;
+}
+#header .link_btn.scroll {
+  color: #252E33;
+}
+#header .link_btn.scroll::before {
+  background-color: #252E33;
+}
+
+#profile .content {
+  display: flex;
+  justify-content: center;
+}
+#profile .content .pic {
+  margin: auto 5rem auto 0;
+  width: 50rem;
+  height: 50rem;
+  border-radius: 5rem;
+  overflow: hidden;
+}
+#profile .content .pic img {
+  margin-top: -3rem;
+}
+#profile .content .about_box {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  flex-direction: column;
+}
+#profile .content .about_box .details {
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 2.5rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  color: #555;
+  text-align: center;
+}
+#profile .content .about_box .details h3 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+#profile .content .about_box .txt {
+  margin-top: 3rem;
+  font-size: 1.7rem;
+  line-height: 2.5;
+}
+
+#experience .skill {
+  margin: -3rem 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+#experience .skill li {
+  margin: 5rem 3rem;
+  width: calc(33.33% - 6rem);
+  font-size: 1.4rem;
+  letter-spacing: -1px;
+  line-height: 2.3;
+}
+
+#experience .skill li i {
+  display: block;
+  padding-bottom: 3rem;
+  font-size: 5rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#experience .skill li strong {
+  display: block;
+  padding-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #aaa;
+}
+
+#Projects .tab_container {
+  border-radius: 1em;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04), 0 35px 2px -20px #e7e7ef;
+}
+#Projects .tab_container .tab_list {
+  display: flex;
+  align-items: center;
+}
+#Projects .tab_container .tab_list .tab {
+  padding: 1em;
+  border: 1px solid #ddd;
+  background-color: #f5f7fa;
+  color: #8c90ab;
+  text-align: center;
+}
+#Projects .tab_container .tab_list .tab:focus {
+  border: 1px solid #252E33;
+}
+#Projects .tab_container .tab_list .tab + .tab {
+  border-left: 0;
+}
+#Projects .tab_container .tab_list .tab[aria-selected="true"] {
+  background-color: #fff;
+  color: #5a68c4;
+  border-bottom: 0;
+}
+#Projects .tab_container .tab_content {
+  padding: 2rem;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+.project_list_warp {
+  margin-top: 8rem;
+}
+.project_list_warp h3 {
+  font-weight: 700;
+}
+.project_list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 1rem -1rem 0;
+}
+
+.project_list .project_item {
+  width: calc(25% - 2.2rem);
+  margin: 0 1rem 5rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  border: 0.1rem solid #eee;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04), 0 35px 2px -20px #e7e7ef;
+}
+.project_list .project_item a {
+  display: block;
+  padding: 2rem;
+}
+.project_list .project_icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+.project_list .project_title {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+.project_list .project_desc {
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
+}
+.project_list .project_skill i {
+  position: relative;
+  display: inline-block;
+  margin-right: 1rem;
+  padding-right: 1rem;
+  font-style: normal;
+}
+.project_list .project_skill i::before {
+  content: "";
+  position: absolute;
+  right: 0%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 1rem;
+  background-color: #ddd;
+}
+.project_list .project_skill i:last-child {
+  margin-right: 0;
+  padding-right: 0;
+}
+.project_list .project_skill i:last-child::before {
+  display: none;
+}
+
+#footer {
+  margin-top: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #252E33;
+  height: 10rem;
+  text-align: center;
+  color: #fff;
+}
+
+@media screen and (max-width: 1300px) {
+  section {
+    margin: 0 2rem;
+  }
+  .arrow {
+    right: 0;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #profile .content {
+    flex-wrap: wrap;
+  }
+  #profile .content .pic {
+    max-width: 50rem;
+    margin-right: 0;
+  }
+  #profile .content .about_box {
+    flex: auto;
+    margin-top: 2rem;
+  }
+  #profile .content .about_box .txt {
+    margin-top: 1rem;
+  }
+  .arrow {
+    display: none;
+  }
+  .project_list .project_item {
+    width: calc(100% - 2.2rem);
+  }
+}
+@media screen and (max-width: 700px) {
+  #header h1 {
+    font-size: 2.2rem;
+  }
+  #header p {
+    font-size: 8vw;
+  }
+  section .title {
+    padding-top: 5rem;
+  }
+  #experience .skill li {
+    width: calc(100% - 6rem);
+  }
+  
+}
+@media screen and (max-width: 500px) {
+  #profile .content .pic {
+    height: 40rem;
+  }
+}
