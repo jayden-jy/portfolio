@@ -43,6 +43,9 @@ body {
   -webkit-text-size-adjust: none;
   color: #252E33;
 }
+body.popup_open {
+  overflow: hidden;
+}
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
@@ -108,4 +111,62 @@ mark {
   height: 1px;
   margin: -1px;
   overflow: hidden;
+}
+
+.wrap_layer {
+  visibility: hidden;
+  overflow: hidden;
+  position: fixed;
+  top: 10rem;
+  right: 10rem;
+  bottom: 10rem;
+  left: 10rem;
+  z-index: 100;
+}
+.wrap_layer::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 101;
+}
+.wrap_layer.show {
+  visibility: visible;
+  opacity: 1;
+}
+.wrap_layer .inner_layer {
+  position: absolute;
+  top: 6rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 102;
+  background-color: #fff;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.wrap_layer .head_layer {
+  position: relative;
+  min-height: 6rem;
+  background-color: #fff;
+  z-index: 102;
+}
+.wrap_layer .head_layer h2 {
+  padding-left: 3rem;
+  line-height: 6rem;
+  font-weight: 700;
+}
+.wrap_layer .btn_ico_close {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  top: 1.0rem;
+  right: 1rem;
+  font-size: 2.4rem;
+  z-index: 102;
 }
