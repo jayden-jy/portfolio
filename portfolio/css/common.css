@@ -150,6 +150,10 @@ mark {
   overflow-x: hidden;
   overflow-y: auto;
 }
+.wrap_layer .content_layer img {
+  display: block;
+  margin: 0 auto;
+}
 .wrap_layer .head_layer {
   position: relative;
   min-height: 6rem;
