@@ -224,7 +224,7 @@
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   // section 화면 노출 확인
-  let observer = new IntersectionObserver((entries) => {
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.style.opacity = 1;
@@ -238,16 +238,15 @@ document.addEventListener("DOMContentLoaded", function() {
     threshold: 0.4
   });
 
-  let items = document.querySelectorAll('section');
+  const items = document.querySelectorAll('section');
   items.forEach(item => observer.observe(item));
 });
 
 
 // 버튼 색상 변경
 window.addEventListener('scroll', function() {
-  var body = document.body;
-  var scrollPosition = window.scrollY;
-  var linkBtn = document.querySelector('.link_btn');
+  const scrollPosition = window.scrollY;
+  const linkBtn = document.querySelector('.link_btn');
 
   if (scrollPosition > 0) {
     linkBtn.classList.add('scroll');
