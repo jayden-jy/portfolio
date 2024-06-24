@@ -200,7 +200,6 @@ section .title h2 {
 }
 .project_list {
   display: flex;
-  justify-content: flex-start;
   flex-wrap: wrap;
   margin: 1rem -1rem 0;
 }
@@ -210,7 +209,6 @@ section .title h2 {
   margin: 0 1rem 5rem;
   border-radius: 1rem;
   background-color: #fff;
-  border: 0.1rem solid #eee;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 .project_list .project_item a {
