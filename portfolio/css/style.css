@@ -32,11 +32,11 @@ section .title h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('../images/bg.jpg') no-repeat center;
+  background: url("../images/bg.jpg") no-repeat center;
   background-size: cover;
 }
 #header::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -97,7 +97,7 @@ section .title h2 {
   transition: all 0.35s;
 }
 #header .link_btn::before {
-  content: '';
+  content: "";
   position: absolute;
   right: 0;
   top: 50%;
@@ -108,10 +108,10 @@ section .title h2 {
   transition: all 0.35s;
 }
 #header .link_btn.scroll {
-  color: #252E33;
+  color: #252e33;
 }
 #header .link_btn.scroll::before {
-  background-color: #252E33;
+  background-color: #252e33;
 }
 
 #profile .content {
@@ -182,7 +182,9 @@ section .title h2 {
 
 #Projects .tab_container {
   border-radius: 1em;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  box-shadow:
+    0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
 }
 #Projects .tab_container .tab_list {
   display: flex;
@@ -196,7 +198,7 @@ section .title h2 {
   text-align: center;
 }
 #Projects .tab_container .tab_list .tab:focus {
-  border: 1px solid #252E33 !important;
+  border: 1px solid #252e33 !important;
 }
 #Projects .tab_container .tab_list .tab + .tab {
   border-left: 0;
@@ -229,7 +231,9 @@ section .title h2 {
   margin: 0 1rem 5rem;
   border-radius: 1rem;
   background-color: #fff;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  box-shadow:
+    0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
 }
 .project_list .project_item a {
   display: block;
@@ -281,7 +285,7 @@ section .title h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #252E33;
+  background: #252e33;
   height: 10rem;
   text-align: center;
   color: #fff;
@@ -350,4 +354,51 @@ section .title h2 {
   }
 }
 
-
+.react_project_wrap {
+  margin-top: 4rem;
+  margin-bottom: 8rem;
+}
+.react_project_wrap .project_item {
+  width: 100%;
+  padding: 2rem;
+}
+.react_project_wrap .project_desc {
+  color: #555;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+.react_project_wrap .project_links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.react_project_wrap .project_links a {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.6rem !important;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-radius: 0.6rem;
+  transition: all 0.25s ease-in-out;
+  text-decoration: none;
+}
+.react_project_wrap .project_links .btn_primary {
+  background-color: #5a68c4;
+  color: #fff !important;
+}
+.react_project_wrap .project_links .btn_primary:hover {
+  background-color: #4350aa;
+  transform: translateY(-2px);
+}
+.react_project_wrap .project_links .btn_secondary {
+  background-color: #f5f7fa;
+  color: #8c90ab !important;
+  border: 1px solid #ddd;
+}
+.react_project_wrap .project_links .btn_secondary:hover {
+  background-color: #e5e7eb;
+  color: #252e33 !important;
+  transform: translateY(-2px);
+}

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -53,7 +53,11 @@
           </div>
         </div>
       </div>
-      <button type="button" class="arrow" onclick="location.href='#experience'">
+      <button
+        type="button"
+        class="arrow"
+        onclick="location.href = '#experience'"
+      >
         <span class="blind">하단이동</span
         ><i class="fa-solid fa-angles-down" aria-hidden="true"></i>
       </button>
@@ -102,7 +106,7 @@
           </li>
         </ul>
       </div>
-      <button type="button" class="arrow" onclick="location.href='#Projects'">
+      <button type="button" class="arrow" onclick="location.href = '#Projects'">
         <span class="blind">하단이동</span
         ><i class="fa-solid fa-angles-down" aria-hidden="true"></i>
       </button>
@@ -297,6 +301,37 @@
           </div>
         </div>
       </div>
+      <div class="project_list_warp react_project_wrap">
+        <h3>React Study Playground</h3>
+
+        <div class="project_list">
+          <div class="project_item">
+            <strong class="project_title">React Hooks 학습 대시보드</strong>
+            <p class="project_desc">공부 실습 중인 자료입니다.</p>
+
+            <div class="project_skill">
+              <i>React</i>
+              <i>TypeScript</i>
+              <i>Vite</i>
+            </div>
+
+            <div class="project_links" onclick="event.stopPropagation()">
+              <a
+                href="https://shadcn-ui-eta-three.vercel.app/"
+                target="_blank"
+                class="btn_primary"
+                >실행 화면 보기</a
+              >
+              <a
+                href="https://github.com/jayden-jy/shadcnUi"
+                target="_blank"
+                class="btn_secondary"
+                >GitHub 소스코드</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer id="footer">
@@ -343,7 +378,7 @@
           },
           {
             threshold: 0.4,
-          }
+          },
         );
 
         const items = document.querySelectorAll("section");
